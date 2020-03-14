@@ -1,25 +1,7 @@
 
 <?php
 
-
-//require 'sqlconnect.php'; 
-
-try {
-
-    $pdo = new PDO('mysql:host=localhost;dbname=weatherapp', 'angelique', 'Coupoledeau12');
-       
-
-} catch (Exception $e) {
-        die('erreur: '. $e->getMessage());
-}
-
-
-
-?>
-
-<?php
-
-
+require 'sqlconnect.php'; 
 
 
  //if (isset($_POST['submit'])) {
@@ -69,7 +51,14 @@ try {
 
 
 //insert new values in database
-//$sql = "INSERT INTO meteo (ville, haut, bas) VALUES ('Gand', 10, 28)";
+//$sql = "INSERT INTO meteo 
+//(ville, haut, bas) 
+//VALUES 
+//('Bruxelles', 27, 13),
+//('Liège', 25, 15),
+//('Namur', 26, 15),
+//('Charleroi', 25, 12),
+//('Bruges', 28, 16)";
 //$pdo->exec($sql); 
 //echo "yes";
 
@@ -80,7 +69,7 @@ try {
 //echo "success";
 
 //delete values
-//$sql = "DELETE FROM meteo WHERE idville=7";
+//$sql = "DELETE FROM meteo WHERE idville=3";
 //$pdo->exec($sql);
 //echo "delete";
 

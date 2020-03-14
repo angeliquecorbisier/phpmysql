@@ -2,7 +2,7 @@
 
 try {
 
-$pdo = new PDO('mysql:host=localhost;dbname=weatherapp', 'angelique', 'Coupoledeau12');
+$pdo = new PDO('mysql:host=localhost;dbname=weatherapp', 'root', '');
 
 
 } catch (Exception $e) {

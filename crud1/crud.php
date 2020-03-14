@@ -22,4 +22,4 @@ while ($donnees = $resultat->fetch())
 }
 
     $results->closeCursor();
-?>
+?> 
