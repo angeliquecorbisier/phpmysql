@@ -12,3 +12,5 @@ $pdo = new PDO('mysql:host=localhost;dbname=weatherapp', 'root', '');
 
 
 ?>
+
+
