@@ -15,6 +15,7 @@ try {
 
 $resultat = $pdo->query('SELECT * FROM clients WHERE card=1 order by firstName asc limit 2');
 
+
 while ($donnees = $resultat->fetch())
 {
     echo $donnees['firstName'] . '<br>';

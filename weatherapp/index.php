@@ -12,14 +12,13 @@ require 'sqlconnect.php';
  //}
 
 
-// if (isset($_POST['submit'])) {
-// $ville = $_POST['ville']; 
-// var_dump($ville);
-// $sql = "INSERT INTO meteo (ville) VALUES ('$ville')";
-// $data = $pdo->exec($sql);
-// var_dump($data);
-// }
-
+ if (isset($_POST['submit'])) {
+ $ville = $_POST['ville']; 
+ var_dump($ville);
+ $sql = "INSERT INTO meteo (ville) VALUES ('$ville')";
+ $data = $pdo->exec($sql);
+ var_dump($data);
+ }
 
 
 
