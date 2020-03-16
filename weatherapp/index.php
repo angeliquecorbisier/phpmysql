@@ -19,7 +19,7 @@ require 'sqlconnect.php';
 <?php
 
 //  if (isset($_POST['submit'])) {
-//    $ville = $_POST['ville'];
+//    $ville = $_POST['ville']; 
 //    var_dump($ville);
 //    $sql = "DELETE FROM meteo WHERE ville = '$ville'";
 //    $data = $pdo->exec($sql);
@@ -33,6 +33,7 @@ require 'sqlconnect.php';
 //  $data = $pdo->exec($sql);
 //  var_dump($data);
 //  }
+
 
 
 ?>
