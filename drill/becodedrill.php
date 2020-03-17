@@ -36,10 +36,13 @@ require 'sqlconnect.php';
 
 // exo 7
 
+
+
 // insert new values in database
-$sql = "INSERT INTO students (prenom, nom, datenaissance) VALUES ('Ginette', 'Dalor', '01/01/1930')";
+$sql = "INSERT INTO students (nom, prenom) VALUES ('Ginette', 'Dalor')";
 $pdo->exec($sql); 
 echo "yes";
+
 
 
 ?>
