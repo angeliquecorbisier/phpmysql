@@ -1,4 +1,23 @@
-<!DOCTYPE html>
+<?php
+
+
+require 'sqlconnect.php'; 
+
+
+	 if (isset($_POST['update'])) {
+
+ $id = $_POST['id'];
+
+ $sql = "UPDATE crudbasic SET name='$_POST[name]' WHERE id='$id'";
+ $data = $pdo->exec($sql);
+ var_dump($data);
+ }
+
+
+
+	?> 
+	
+	<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -47,23 +66,6 @@
 
 
 
-	<?php
-
-
-require 'sqlconnect.php'; 
-
-
-	 if (isset($_POST['update'])) {
-
- $id = $_POST['id'];
-
- $sql = "UPDATE crudbasic SET name='$_POST[name]' WHERE id='$id'";
- $data = $pdo->exec($sql);
- var_dump($data);
- }
-
-
-
-	?> 
+	
 </body>
 </html>

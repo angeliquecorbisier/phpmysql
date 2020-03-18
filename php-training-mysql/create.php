@@ -1,3 +1,23 @@
+<?php
+
+require 'sqlconnect.php'; 
+
+
+	 if (isset($_POST['button'])) {
+
+ $name = $_POST['name']; 
+ $difficulty = $_POST['difficulty'];
+ $distance = $_POST['distance']; 
+ $duration = $_POST['duration']; 
+ $heightdiff = $_POST['height_difference']; 
+
+ $sql = "INSERT INTO crudbasic (name, difficulty, distance, duration, height_difference) VALUES ('$name', '$difficulty', '$distance', '$duration', '$heightdiff')";
+ $data = $pdo->exec($sql);
+ var_dump($data);
+ }
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,25 +61,7 @@
 		<button type="submit" name="button">Envoyer</button>
 	</form>
 
-<?php
 
-require 'sqlconnect.php'; 
-
-
-	 if (isset($_POST['button'])) {
-
- $name = $_POST['name']; 
- $difficulty = $_POST['difficulty'];
- $distance = $_POST['distance']; 
- $duration = $_POST['duration']; 
- $heightdiff = $_POST['height_difference']; 
-
- $sql = "INSERT INTO crudbasic (name, difficulty, distance, duration, height_difference) VALUES ('$name', '$difficulty', '$distance', '$duration', '$heightdiff')";
- $data = $pdo->exec($sql);
- var_dump($data);
- }
-
-?>
 
 <a href="update.php"> clique ici pour modifier les infos </a>
 </body>
