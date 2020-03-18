@@ -5,7 +5,7 @@
 
 try {
 
-    $pdo = new PDO('mysql:host=localhost;dbname=colyseum', 'angelique', 'Coupoledeau12');
+    $pdo = new PDO('mysql:host=localhost;dbname=crud1', 'root', '');
        
 
 } catch (Exception $e) {
@@ -13,14 +13,28 @@ try {
 }
 
 
-$resultat = $pdo->query('SELECT * FROM clients WHERE card=1 order by firstName asc limit 2');
+// $results = $pdo->query('SELECT * FROM clients WHERE card=1 order by firstName asc limit 2');
 
 
-while ($donnees = $resultat->fetch())
+// while ($donnees = $results->fetch())
+// {
+//     echo $donnees['firstName'] . '<br>';
+
+// }
+
+//     $results->closeCursor();
+
+$results = $pdo->query('SELECT * FROM clients WHERE lastName LIKE "M%"');
+
+
+while ($donnees = $results->fetch())
 {
-    echo $donnees['firstName'] . '<br>';
+    echo $donnees['lastName'] . '<br>';
 
 }
 
     $results->closeCursor();
 ?> 
+
+
+
