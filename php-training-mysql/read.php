@@ -7,23 +7,31 @@
   </head>
   <body>
 
-  <?php
+
+    <h1>Liste des randonnées</h1>
+    <table>  
+    
+    <?php
   
-require 'sqlconnect.php'; 
+require 'sqlconnect.php';
+
 
 
 $results = $pdo->query('SELECT * FROM crudbasic');
 
 while($donnees = $results->fetch()) 
-    echo $donnees['name']. ' '. $donnees['difficulty']. ' '. $donnees['distance'] . '</br>';
+    echo $donnees['name']. ' '. $donnees['difficulty']. ' '. $donnees['distance'] . ' ' . $donnees['duration'] . ' ' . $donnees['height_difference'] . '</br>';
 
-    $results->closeCursor();
+   $results->closeCursor();
 
 
-  ?>
-    <h1>Liste des randonnées</h1>
-    <table>
-      <!-- Afficher la liste des randonnées -->
+   
+?>
+
+<p>Mauvaise manip ? Changez les données via ce lien <a href="update.php">clique ici</a>. 
+
+
     </table>
   </body>
 </html>
+

@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="css/basics.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-	<a href="/php-pdo/read.php">Liste des données</a>
+	<a href="read.php">Liste des données</a>
 	<h1>Ajouter</h1>
 	<form action="" method="post">
 		<div>
@@ -22,6 +22,7 @@
 				<option value="moyen">Moyen</option>
 				<option value="difficile">Difficile</option>
 				<option value="très difficile">Très difficile</option>
+				<option value="cauchemar">Cauchemar</option>
 			</select>
 		</div>
 
@@ -53,13 +54,13 @@ require 'sqlconnect.php';
  $duration = $_POST['duration']; 
  $heightdiff = $_POST['height_difference']; 
 
-
- var_dump($name);
  $sql = "INSERT INTO crudbasic (name, difficulty, distance, duration, height_difference) VALUES ('$name', '$difficulty', '$distance', '$duration', '$heightdiff')";
  $data = $pdo->exec($sql);
  var_dump($data);
  }
 
 ?>
+
+<a href="update.php"> clique ici pour modifier les infos </a>
 </body>
 </html>
